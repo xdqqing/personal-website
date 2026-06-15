@@ -198,10 +198,25 @@ Agent 可以自主：
 GitHub 发布约定：
 
 - 本项目提交和推送直接使用系统 Git，不调用 GitHub 发布 Skill，也不要求 GitHub CLI。
-- 默认远程仓库：`https://github.com/xdqqing/personal-website.git`
+- 默认远程仓库：`git@github.com:xdqqing/personal-website.git`
 - 默认分支：`main`
+- 当前项目固定使用 SSH 密钥：`/Users/wdq/.ssh/id_ed25519_github_pm`
+- 当前仓库的 `core.sshCommand` 应保持为：`ssh -i /Users/wdq/.ssh/id_ed25519_github_pm -o IdentitiesOnly=yes`
 - 每次提交和推送默认只包含 `index.html` 与 `AGENTS.md`。
 - PDF、DOCX、PPTX、视频及其他项目素材保持本地，不加入 Git 跟踪。
+- 不使用 GitHub HTTPS 远程进行推送；当前环境访问 `github.com:443` 会超时，而 SSH 通道已经验证可用。
+
+用户明确要求提交或发布时，按以下顺序执行：
+
+1. 运行 `git status --short --branch`，确认当前分支和工作区变化。
+2. 检查远程地址与 `core.sshCommand`，确保使用上述 SSH 仓库和专用密钥。
+3. 使用 `git add -- index.html AGENTS.md`，不得使用 `git add .` 或 `git add -A`。
+4. 使用 `git diff --cached --name-only` 确认暂存区只有 `index.html` 和 `AGENTS.md`。
+5. 创建普通提交，不修改或合并已有提交，除非用户明确要求。
+6. 使用 `git push -u origin main` 完成首次上游设置；后续使用 `git push`。
+7. 推送后核对 `main` 正在跟踪 `origin/main`，并确认其他素材仍为未跟踪状态。
+
+首次推送本身不会导致连接失败。若推送异常，先检查远程是否误设为 HTTPS；不要连续重复 HTTPS 推送，也不要为此安装 GitHub CLI。
 
 未经用户明确确认，Agent 不得：
 
