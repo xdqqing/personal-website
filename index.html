@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="王冬青，B端产品经理与AI产品实践者。专注复杂业务后台、AI能力落地与Vibe Coding快速交付。">
-  <meta name="theme-color" content="#050814">
-  <title>王冬青｜B端产品经理 · AI产品实践者</title>
+  <meta name="description" content="王冬青的产品案例作品集：5年B端产品经验，聚焦复杂后台从0到1、AI产品落地与Vibe Coding验证交付。">
+  <meta name="theme-color" content="#070a10">
+  <title>王冬青｜B端产品经理 · 产品案例作品集</title>
   <style>
     :root {
-      --ink: #050814;
-      --ink-soft: #09101f;
-      --panel: rgba(12, 22, 42, .72);
-      --panel-solid: #0c162a;
-      --line: rgba(142, 171, 220, .16);
-      --line-strong: rgba(94, 225, 255, .34);
-      --text: #f1f7ff;
-      --muted: #91a3bd;
-      --cyan: #55e7ff;
-      --blue: #508cff;
-      --violet: #a579ff;
+      --ink: #070a10;
+      --ink-soft: #0b111a;
+      --panel: rgba(13, 20, 30, .82);
+      --panel-solid: #0d141e;
+      --line: rgba(164, 185, 210, .15);
+      --line-strong: rgba(98, 230, 217, .38);
+      --text: #eef3f7;
+      --muted: #96a5b5;
+      --cyan: #62e6d9;
+      --blue: #6d8cff;
+      --violet: #9f86ff;
+      --amber: #f2b84b;
       --green: #4fe2a4;
       --danger: #ff7085;
       --max: 1180px;
@@ -31,10 +32,7 @@
     body {
       margin: 0;
       color: var(--text);
-      background:
-        radial-gradient(circle at 80% 8%, rgba(78, 92, 255, .13), transparent 26%),
-        radial-gradient(circle at 12% 35%, rgba(28, 222, 255, .07), transparent 22%),
-        var(--ink);
+      background: radial-gradient(circle at 78% 6%, rgba(109, 140, 255, .12), transparent 25%), var(--ink);
       font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
       line-height: 1.65;
       overflow-x: hidden;
@@ -49,12 +47,13 @@
       background-image:
         linear-gradient(rgba(104, 142, 195, .055) 1px, transparent 1px),
         linear-gradient(90deg, rgba(104, 142, 195, .055) 1px, transparent 1px);
-      background-size: 64px 64px;
+      background-size: 72px 72px;
       mask-image: linear-gradient(to bottom, black, transparent 75%);
       z-index: -1;
     }
 
     a { color: inherit; text-decoration: none; }
+    [id] { scroll-margin-top: 100px; }
     button { font: inherit; }
     img { max-width: 100%; display: block; }
     ::selection { background: rgba(85, 231, 255, .25); color: #fff; }
@@ -84,8 +83,8 @@
       justify-content: space-between;
       padding: 10px 12px 10px 18px;
       border: 1px solid rgba(137, 175, 226, .18);
-      border-radius: 18px;
-      background: rgba(5, 8, 20, .72);
+      border-radius: 10px;
+      background: rgba(7, 10, 16, .82);
       backdrop-filter: blur(18px);
       box-shadow: 0 12px 40px rgba(0, 0, 0, .18);
     }
@@ -157,11 +156,12 @@
     .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; box-shadow: 0 0 10px currentColor; }
     .hero h1 {
       margin: 0;
-      max-width: 920px;
-      font-size: clamp(58px, 10vw, 132px);
-      line-height: .88;
-      letter-spacing: -.075em;
-      font-weight: 820;
+      max-width: 900px;
+      font-family: "Arial Narrow", "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: clamp(62px, 10vw, 126px);
+      line-height: .9;
+      letter-spacing: -.065em;
+      font-weight: 800;
     }
     .hero h1 span {
       display: block;
@@ -170,7 +170,7 @@
       line-height: 1.2;
       letter-spacing: -.03em;
       color: transparent;
-      background: linear-gradient(90deg, #e9f8ff, var(--cyan) 46%, #b8a5ff);
+      background: linear-gradient(90deg, #edf4f7, var(--cyan) 62%, #b8c8ff);
       -webkit-background-clip: text;
       background-clip: text;
     }
@@ -184,7 +184,7 @@
       gap: 10px;
       padding: 0 20px;
       border: 1px solid var(--line);
-      border-radius: 13px;
+      border-radius: 8px;
       color: var(--text);
       background: rgba(255,255,255,.035);
       cursor: pointer;
@@ -202,25 +202,27 @@
       width: 290px;
       padding: 17px 18px;
       border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(7, 14, 29, .72);
+      border-radius: 8px;
+      background: rgba(8, 13, 20, .86);
       backdrop-filter: blur(14px);
       color: var(--muted);
-      font: 12px/1.8 ui-monospace, SFMono-Regular, Menlo, monospace;
+      font: 11px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
     }
-    .status-row { display: flex; justify-content: space-between; gap: 18px; }
+    .dossier-head { display: flex; justify-content: space-between; padding-bottom: 11px; margin-bottom: 6px; border-bottom: 1px solid var(--line); color: #d8e3e9; }
+    .status-row { display: flex; justify-content: space-between; gap: 18px; padding: 7px 0; color: var(--muted); }
+    a.status-row:hover, a.status-row:focus-visible { color: var(--text); }
     .status-row strong { color: #dce9f8; font-weight: 600; }
     .pulse { display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px var(--green); }
 
-    .section { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; padding: 112px 0; }
+    .section { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; padding: 118px 0; border-bottom: 1px solid rgba(164,185,210,.08); }
     .section-head { display: grid; grid-template-columns: .72fr 1.28fr; gap: 50px; align-items: end; margin-bottom: 54px; }
     .section-kicker { color: var(--cyan); font: 600 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .14em; text-transform: uppercase; }
-    .section-title { margin: 12px 0 0; font-size: clamp(34px, 5vw, 64px); line-height: 1.04; letter-spacing: -.055em; }
+    .section-title { margin: 12px 0 0; font-family: "Arial Narrow", "PingFang SC", sans-serif; font-size: clamp(36px, 5vw, 66px); line-height: 1.02; letter-spacing: -.05em; }
     .section-lead { margin: 0; color: var(--muted); font-size: 18px; max-width: 620px; }
 
     .capability-grid { display: grid; grid-template-columns: repeat(12, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
     .capability {
-      min-height: 235px;
+      min-height: 255px;
       grid-column: span 4;
       padding: 28px;
       position: relative;
@@ -236,6 +238,7 @@
     .cap-index { color: #4e6079; font: 12px ui-monospace, monospace; }
     .capability h3 { margin: 44px 0 12px; font-size: 21px; }
     .capability p { margin: 0; color: var(--muted); font-size: 14px; }
+    .capability > a { position: absolute; left: 28px; bottom: 24px; color: var(--cyan); font-size: 12px; }
     .cap-tag { position: absolute; right: 22px; top: 25px; color: var(--cyan); font: 11px ui-monospace, monospace; letter-spacing: .08em; }
 
     .case-shell { display: grid; gap: 32px; }
@@ -243,12 +246,12 @@
       position: relative;
       padding: 42px;
       border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: linear-gradient(140deg, rgba(14,25,46,.84), rgba(7,12,25,.7));
+      border-radius: 10px;
+      background: linear-gradient(140deg, rgba(15,23,34,.94), rgba(8,12,18,.88));
       box-shadow: var(--shadow);
       overflow: hidden;
     }
-    .case::before { content: ""; position: absolute; inset: 0 auto auto 0; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--cyan), transparent); opacity: .38; }
+    .case::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; height: auto; background: linear-gradient(var(--cyan), var(--blue), transparent 88%); opacity: .9; }
     .case-top { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: start; }
     .case-label { display: inline-flex; gap: 9px; align-items: center; color: var(--cyan); font: 600 12px ui-monospace, monospace; letter-spacing: .1em; }
     .case-label::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: currentColor; box-shadow: 0 0 12px currentColor; }
@@ -260,9 +263,10 @@
     .meta-item strong { display: block; margin-top: 8px; font-size: 14px; font-weight: 600; color: #d8e3f0; }
 
     .challenge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 40px; }
-    .challenge { padding: 19px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.025); }
+    .challenge { padding: 19px; border: 1px solid var(--line); border-radius: 6px; background: rgba(255,255,255,.022); }
     .challenge strong { display: block; margin-bottom: 7px; color: #dce9f8; font-size: 14px; }
     .challenge span { color: var(--muted); font-size: 13px; }
+    .challenge::before { content: "ISSUE"; display: block; margin-bottom: 12px; color: var(--amber); font: 9px/1 ui-monospace, monospace; letter-spacing: .14em; }
 
     .case-details { max-height: 0; overflow: hidden; opacity: 0; transition: max-height .7s ease, opacity .45s ease, margin .45s ease; }
     .case.open .case-details { max-height: 3000px; margin-top: 36px; opacity: 1; }
@@ -347,6 +351,15 @@
     .lightbox img { max-width: min(1500px, 96vw); max-height: 88vh; border: 1px solid var(--line-strong); border-radius: 16px; box-shadow: 0 30px 100px rgba(0,0,0,.6); }
     .lightbox-close { position: fixed; top: 22px; right: 22px; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; color: #fff; background: rgba(9,17,32,.8); cursor: pointer; }
 
+    .case-coming { border-style: dashed; box-shadow: none; }
+    .case-coming::before { background: linear-gradient(var(--amber), rgba(242,184,75,.08)); }
+    .case-coming .case-label { color: var(--amber); }
+    .case-coming .case-label::before { box-shadow: 0 0 12px rgba(242,184,75,.6); }
+    .build-track { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 34px; }
+    .build-track span { padding: 13px 10px; border: 1px solid var(--line); border-radius: 6px; color: #bbc7d2; background: rgba(255,255,255,.02); text-align: center; font-size: 12px; }
+    .build-track span:first-child { border-color: rgba(242,184,75,.34); color: var(--amber); background: rgba(242,184,75,.05); }
+    .coming-note { margin-top: 24px; padding: 18px 20px; border-left: 2px solid var(--amber); color: var(--muted); background: rgba(242,184,75,.035); font-size: 14px; }
+
     @media (max-width: 900px) {
       .nav-links a:not(.nav-mail) { display: none; }
       .hero-status { display: none; }
@@ -359,6 +372,7 @@
       .principles { grid-template-columns: repeat(2, 1fr); }
       .principle:last-child { grid-column: span 2; }
       .screenshots { grid-template-columns: 1fr; }
+      .build-track { grid-template-columns: repeat(3, 1fr); }
     }
 
     @media (max-width: 620px) {
@@ -380,6 +394,7 @@
       .flow-step:nth-child(3)::after { display: block; }
       .principles { grid-template-columns: 1fr; }
       .principle:last-child { grid-column: auto; }
+      .build-track { grid-template-columns: 1fr 1fr; }
       .timeline::before { left: 7px; }
       .timeline-item { grid-template-columns: 1fr; gap: 8px; padding-left: 30px; }
       .timeline-item::before { left: 1px; }
@@ -402,10 +417,10 @@
   <nav class="nav" aria-label="主导航">
     <a class="brand" href="#top" aria-label="返回首页"><span class="brand-mark" aria-hidden="true"></span>WANG DONGQING</a>
     <div class="nav-links">
-      <a href="#capabilities">能力</a>
-      <a href="#projects">项目</a>
+      <a href="#projects">案例</a>
+      <a href="#capabilities">能力证据</a>
       <a href="#experience">经历</a>
-      <a href="#vibe">Vibe Coding</a>
+      <a href="#vibe">工作方法</a>
       <a class="nav-mail" href="mailto:qqing2021@163.com">联系我</a>
     </div>
   </nav>
@@ -414,18 +429,18 @@
     <canvas id="particle-canvas" aria-hidden="true"></canvas>
     <div class="hero-vignette"></div>
     <div class="hero-inner">
-      <div class="eyebrow">B2B Product / AI Practice / Vibe Coding</div>
-      <h1>王冬青<span>把复杂业务，推进到可用产品。</span></h1>
-      <p class="hero-copy">5 年 B 端产品经验，专注后台系统从 0 到 1 与 AI 能力落地。用产品判断拆解复杂规则，用 Vibe Coding 加速原型验证与交付。</p>
+      <div class="eyebrow">PRODUCT MANAGER · BEIJING</div>
+      <h1>王冬青<span>把复杂规则，做成可运行的产品。</span></h1>
+      <p class="hero-copy">5 年 B 端产品经验。能从业务问题出发，完成产品架构、流程规则、交互原型、测试上线与持续迭代；也在把 AI 校验、分类、提取和 Agent 工作流真正嵌入业务。</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#projects">查看核心项目 <span class="arrow">↘</span></a>
+        <a class="btn btn-primary" href="#projects">进入案例档案 <span class="arrow">↘</span></a>
         <a class="btn" href="mailto:qqing2021@163.com">qqing2021@163.com</a>
       </div>
-      <div class="hero-status" aria-label="能力状态">
-        <div class="status-row"><span><i class="pulse"></i>PROFILE STATUS</span><strong>OPEN</strong></div>
-        <div class="status-row"><span>FOCUS</span><strong>B端 / AI</strong></div>
-        <div class="status-row"><span>DELIVERY</span><strong>0→1</strong></div>
-        <div class="status-row"><span>PROTOTYPE</span><strong>HTML</strong></div>
+      <div class="hero-status" aria-label="作品集索引">
+        <div class="dossier-head"><span><i class="pulse"></i>PORTFOLIO INDEX</span><strong>2026</strong></div>
+        <a class="status-row" href="#case-archive"><span>01 / 企业后台</span><strong>已上线</strong></a>
+        <a class="status-row" href="#case-ai"><span>02 / AI 产品</span><strong>V2.0 / V3.0</strong></a>
+        <a class="status-row" href="#case-service"><span>03 / 个人项目</span><strong>开发中</strong></a>
       </div>
     </div>
   </header>
@@ -433,35 +448,35 @@
   <main id="main">
     <section class="section" id="capabilities">
       <div class="section-head reveal">
-        <div><div class="section-kicker">Capability Matrix</div><h2 class="section-title">不是工具清单，<br>是交付能力。</h2></div>
-        <p class="section-lead">能听懂业务，也能和技术团队讨论边界；能写清规则，也能快速做出可操作的原型。我的工作重点，是让复杂产品真正向前推进。</p>
+        <div><div class="section-kicker">Evidence, not labels</div><h2 class="section-title">能力不靠标签，<br>靠项目里的证据。</h2></div>
+        <p class="section-lead">我更愿意用做过的判断和交付结果说明能力：后台产品看流程与权限，AI 产品看规则与闭环，Vibe Coding 看能否把需求变成可验证的产品。</p>
       </div>
       <div class="capability-grid reveal">
-        <article class="capability"><span class="cap-index">01</span><span class="cap-tag">SYSTEM</span><h3>B 端后台从 0 到 1</h3><p>从业务调研、产品架构到权限、状态、流程与异常策略，独立建立可落地的后台产品方案。</p></article>
-        <article class="capability"><span class="cap-index">02</span><span class="cap-tag">AI</span><h3>AI 功能与 Agent 工作流</h3><p>围绕文档校验、自动分类和信息提取设计业务闭环，并持续跟踪结果、优化 Prompt 与规则策略。</p></article>
-        <article class="capability"><span class="cap-index">03</span><span class="cap-tag">DELIVERY</span><h3>产品全流程交付</h3><p>覆盖需求分析、方案设计、PRD、原型、测试验收、上线跟踪与跨部门项目推进。</p></article>
-        <article class="capability"><span class="cap-index">04</span><span class="cap-tag">PROTOTYPE</span><h3>Vibe Coding 交互原型</h3><p>将规则密集型需求快速转化为 HTML 交互原型，提前验证流程、页面状态和关键操作。</p></article>
-        <article class="capability"><span class="cap-index">05</span><span class="cap-tag">DATA & TECH</span><h3>数据分析与技术协作</h3><p>数学与信息通信工程背景，熟悉 SQL、Python，能够围绕数据指标、接口与技术约束高效沟通。</p></article>
+        <article class="capability"><span class="cap-index">01</span><span class="cap-tag">SYSTEM</span><h3>复杂后台架构</h3><p>在非结构化文档归档项目中，完成业务应用、系统配置、基础数据与权限模型的 V1.0 架构设计。</p><a href="#case-archive">查看对应案例 →</a></article>
+        <article class="capability"><span class="cap-index">02</span><span class="cap-tag">AI</span><h3>AI 业务闭环</h3><p>围绕分类、提取与校验建设可维护规则库，并补齐置信度、人工修正、异常恢复与审批衔接。</p><a href="#case-ai">查看对应案例 →</a></article>
+        <article class="capability"><span class="cap-index">03</span><span class="cap-tag">DELIVERY</span><h3>全流程交付</h3><p>覆盖需求分析、产品设计、PRD、交互原型、测试验收、上线跟踪与跨部门推进。</p><a href="#experience">查看经历证据 →</a></article>
+        <article class="capability"><span class="cap-index">04</span><span class="cap-tag">PROTOTYPE</span><h3>Vibe Coding 验证</h3><p>用单文件 HTML 还原字段、状态、异常与操作反馈，让产研在开发前验证关键方案。</p><a href="https://xdqqing.github.io/Work-projects/" target="_blank" rel="noopener noreferrer">体验真实原型 ↗</a></article>
+        <article class="capability"><span class="cap-index">05</span><span class="cap-tag">DATA & TECH</span><h3>数据与技术协作</h3><p>数学与信息通信工程背景，熟悉 SQL、Python，能围绕数据、接口与技术边界高效沟通。</p><a href="#vibe">查看工作方法 →</a></article>
       </div>
     </section>
 
     <section class="section" id="projects">
       <div class="section-head reveal">
-        <div><div class="section-kicker">Selected Work</div><h2 class="section-title">用真实项目，<br>说明产品判断。</h2></div>
-        <p class="section-lead">两个案例来自同一条业务主线：先建立非结构化文档统一服务，再把 AI 校验嵌入归档审批，形成从数据标准到智能质量门禁的完整能力。</p>
+        <div><div class="section-kicker">Selected case files</div><h2 class="section-title">三个案例，<br>三种纵深。</h2></div>
+        <p class="section-lead">企业后台展示复杂业务建模，档案智能化展示 AI 分类、提取与校验如何进入主流程，正在开发的 AI 客服系统则用于验证一个人完成全链路产品交付的边界。</p>
       </div>
 
       <div class="case-shell">
         <article class="case reveal" id="case-archive">
           <div class="case-top">
             <div>
-              <div class="case-label">CASE 01 / B2B SYSTEM</div>
-              <h3>业档一体：非结构化文档统一服务</h3>
-              <p class="case-summary">主导从 0 到 1 建设集团级电子文件归集后台，把分散、事后、依赖人工的归档工作，重构为可追踪、可审批、可配置的标准化流程。</p>
+              <div class="case-label">CASE 01 / ENTERPRISE SYSTEM / SHIPPED</div>
+              <h3>非结构化文档归档中台</h3>
+              <p class="case-summary">对应《V1.0 非结构化文档归档中台-产品需求说明书（PRD）》，产品正式名称为“非结构化文档归档统一服务”。面向企业多来源、多类型文档，从 0 到 1 建立统一归集入口，以申请串联上传、标准化整理、审批流转和电子文件台账生成。</p>
             </div>
             <div class="case-meta">
-              <div class="meta-item"><small>Role</small><strong>产品经理 / 项目负责人</strong></div>
-              <div class="meta-item"><small>Stage</small><strong>规划 → 上线</strong></div>
+              <div class="meta-item"><small>Role</small><strong>产品经理 / 0→1 主导</strong></div>
+              <div class="meta-item"><small>Version</small><strong>V1.0 基础版</strong></div>
               <div class="meta-item"><small>Method</small><strong>PRD + HTML 原型</strong></div>
               <div class="meta-item"><small>Focus</small><strong>流程 / 权限 / 标准</strong></div>
             </div>
@@ -479,8 +494,8 @@
                 <ul class="clean-list">
                   <li>梳理业务现状与档案标准，定义 V1.0 产品范围和整体页面架构。</li>
                   <li>设计上传申请、审批流转、电子文件台账与系统配置等核心链路。</li>
-                  <li>定义 8 类归档状态、编辑权限、撤回与异常处理策略。</li>
-                  <li>设计组织、法人、项目等数据权限和自动爬层审批规则。</li>
+                  <li>定义 7 类审批状态、4 类归档状态，以及编辑、撤回、驳回与异常恢复策略。</li>
+                  <li>设计组织范围与档案分类范围取交集的数据权限模型，并对接人员、组织、法人和项目主数据。</li>
                   <li>使用 Vibe Coding 搭建 HTML 原型，验证核心交互并推动产研对齐。</li>
                 </ul>
               </div>
@@ -498,8 +513,8 @@
             </div>
             <div class="metrics-strip">
               <div class="metric"><strong>0→1</strong><span>独立推进后台系统完整建设</span></div>
-              <div class="metric"><strong>8</strong><span>归档状态及其流转规则</span></div>
-              <div class="metric"><strong>2</strong><span>原始格式与长期保存格式并存</span></div>
+              <div class="metric"><strong>7+4</strong><span>审批状态与归档状态双轨建模</span></div>
+              <div class="metric"><strong>1→1</strong><span>每份审批通过文件生成一条电子台账</span></div>
             </div>
             <div class="hero-actions">
               <a class="btn btn-primary" href="https://xdqqing.github.io/Work-projects/" target="_blank" rel="noopener noreferrer">打开真实交互原型 <span class="arrow">↗</span></a>
@@ -511,42 +526,43 @@
         <article class="case reveal" id="case-ai">
           <div class="case-top">
             <div>
-              <div class="case-label">CASE 02 / AI PRODUCT</div>
-              <h3>AI 校验：归档前的智能质量门禁</h3>
-              <p class="case-summary">把原本依赖人工经验的完整性、规范性和合规性检查，嵌入审批第一节点。AI 不只给结论，还说明位置、依据与修改建议，让问题能够被处理和追溯。</p>
+              <div class="case-label">CASE 02 / AI PRODUCT / V2.0—V3.0</div>
+              <h3>档案智能化：AI 分类、提取与校验</h3>
+              <p class="case-summary">围绕《AI分类与提取需求文档》和《AI校验功能-需求文档说明》推进产品升级：先自动判断资料类型并提取关键元数据，再把质量校验放在人工审批前；AI 结果可解释、可修正，异常时能够回到人工流程。</p>
             </div>
             <div class="case-meta">
               <div class="meta-item"><small>Role</small><strong>AI 产品经理</strong></div>
-              <div class="meta-item"><small>Version</small><strong>V2.0</strong></div>
-              <div class="meta-item"><small>Engine</small><strong>规则库 + Agent</strong></div>
+              <div class="meta-item"><small>Version</small><strong>V2.0 / V3.0</strong></div>
+              <div class="meta-item"><small>Engine</small><strong>规则库 + Agent 工作流</strong></div>
               <div class="meta-item"><small>Surface</small><strong>PC + 移动审批</strong></div>
             </div>
           </div>
-          <div class="principles" aria-label="AI校验核心价值">
-            <div class="principle">规则可配置</div><div class="principle">校验可解释</div><div class="principle">结果可追溯</div><div class="principle">流程可拦截</div><div class="principle">整改可闭环</div>
+          <div class="principles" aria-label="档案智能化核心价值">
+            <div class="principle">分类可修正</div><div class="principle">提取可追溯</div><div class="principle">规则可维护</div><div class="principle">校验可解释</div><div class="principle">异常可恢复</div>
           </div>
-          <div class="flow" aria-label="AI校验流程">
-            <div class="flow-step"><span>01</span><b>规则匹配</b></div><div class="flow-step"><span>02</span><b>AI 校验</b></div><div class="flow-step"><span>03</span><b>结果解释</b></div><div class="flow-step"><span>04</span><b>整改处理</b></div><div class="flow-step"><span>05</span><b>重新提交</b></div><div class="flow-step"><span>06</span><b>人工审批</b></div>
+          <div class="flow" aria-label="档案智能化处理流程">
+            <div class="flow-step"><span>01</span><b>文件上传</b></div><div class="flow-step"><span>02</span><b>AI 分类</b></div><div class="flow-step"><span>03</span><b>字段提取</b></div><div class="flow-step"><span>04</span><b>人工修正</b></div><div class="flow-step"><span>05</span><b>AI 校验</b></div><div class="flow-step"><span>06</span><b>人工审批</b></div>
           </div>
           <button class="btn case-toggle" type="button" aria-expanded="false">展开 AI 产品拆解 <span class="arrow">↓</span></button>
           <div class="case-details">
             <div class="detail-grid">
               <div class="detail-block">
-                <h4>规则体系</h4>
+                <h4>AI 分类与提取</h4>
                 <ul class="clean-list">
-                  <li>6 大检查维度、12 个标准检查项，覆盖要素、信息、合规、时效、质量与附件完整性。</li>
-                  <li>通用规则覆盖所有文件，专项规则按档案资料类型精准匹配。</li>
-                  <li>规则记录 Agent 判定逻辑、风险等级、强控制策略和法规依据。</li>
-                  <li>支持规则新增、编辑、筛选、启停、导出与持续运营。</li>
+                  <li>文件上传后自动匹配档案目录中的资料类型，并允许用户在提交前人工修正。</li>
+                  <li>依据资料类型提取题名、责任者、成文日期、文号等关键元数据，减少重复录入。</li>
+                  <li>分类规则库与提取规则库均可维护，让匹配依据、提取位置和启停状态可治理。</li>
+                  <li>通过置信度、来源标记、重新提取、排队任务和异常状态补齐人机协作闭环。</li>
                 </ul>
               </div>
               <div class="detail-block">
-                <h4>关键产品判断</h4>
+                <h4>AI 校验与人工兜底</h4>
                 <ul class="clean-list">
+                  <li>6 大检查维度、12 个标准检查项；通用规则覆盖所有文件，专项规则按资料类型匹配。</li>
                   <li>AI 校验作为审批首节点，确保问题在人工审核前被发现。</li>
-                  <li>不通过项给出校验定位、判定依据和修改建议，建立可解释性。</li>
+                  <li>不通过项给出校验定位、判定依据、风险等级和修改建议；当前强控制配置仅展示，不做系统拦截。</li>
                   <li>用户可替换文件重新校验，或填写说明进入人工复核，避免 AI 误判造成流程死锁。</li>
-                  <li>Agent 连续三次失败后进入审批异常并支持人工处理，保障主流程可恢复。</li>
+                  <li>Agent 连续三次调用失败或超时后标记“AI 校验异常”，自动进入人工复核，避免主流程被智能节点卡死。</li>
                 </ul>
               </div>
             </div>
@@ -562,6 +578,26 @@
             </div>
           </div>
         </article>
+
+        <article class="case case-coming reveal" id="case-service">
+          <div class="case-top">
+            <div>
+              <div class="case-label">CASE 03 / PERSONAL PRODUCT / BUILDING</div>
+              <h3>AI 客服系统</h3>
+              <p class="case-summary">计划由 1 人完成一个真实线上可用的智能客服系统，覆盖前端交互、后端代码、权限管理、数据存储、Agent 搭建和云服务器部署，验证从产品定义到线上运行的全链路能力。</p>
+            </div>
+            <div class="case-meta">
+              <div class="meta-item"><small>Status</small><strong>正在开发中</strong></div>
+              <div class="meta-item"><small>Type</small><strong>个人项目</strong></div>
+              <div class="meta-item"><small>Scope</small><strong>产品 + 全栈 + Agent</strong></div>
+              <div class="meta-item"><small>Goal</small><strong>真实线上可用</strong></div>
+            </div>
+          </div>
+          <div class="build-track" aria-label="AI客服系统计划范围">
+            <span>产品定义</span><span>前端交互</span><span>后端服务</span><span>权限与数据</span><span>Agent 搭建</span><span>云端部署</span>
+          </div>
+          <p class="coming-note">当前仅展示已确认的建设目标，不将计划中的能力包装为已完成成果。项目达到可演示状态后，这里将补充真实架构、关键取舍、线上地址与复盘。</p>
+        </article>
       </div>
     </section>
 
@@ -573,7 +609,7 @@
       <div class="timeline reveal">
         <article class="timeline-item">
           <div class="time">2025.11 — 至今</div>
-          <div class="experience"><h3>北控水务（中国）投资有限公司</h3><div class="role">AI 产品经理</div><p>主导非结构化文档统一归档系统建设，并负责 AI 文档校验、自动分类及关键信息提取能力的产品落地，跟踪 Agent 执行结果并持续优化规则与策略。</p><div class="result-tags"><span>后台 0→1</span><span>AI 校验</span><span>规则体系</span><span>Agent 优化</span></div></div>
+          <div class="experience"><h3>北控水务（中国）投资有限公司</h3><div class="role">AI 产品经理</div><p>主导“非结构化文档归档中台”从需求分析、产品设计、交互原型到测试上线的完整闭环；负责 AI 校验、自动分类和关键信息提取能力建设，并持续跟踪 Agent 结果、优化提示词与规则策略。</p><div class="result-tags"><span>后台 0→1</span><span>AI 分类与提取</span><span>AI 校验</span><span>Agent 迭代</span></div></div>
         </article>
         <article class="timeline-item">
           <div class="time">2023.03 — 2025.08</div>
@@ -581,18 +617,18 @@
         </article>
         <article class="timeline-item">
           <div class="time">2021.07 — 2022.12</div>
-          <div class="experience"><h3>上海会畅通讯股份有限公司</h3><div class="role">产品经理</div><p>参与企业直播与视频会议 SaaS 产品设计，基于客户使用行为开展数据分析，支持客户成功团队完成关键客户续约。</p><div class="result-tags"><span>企业 SaaS</span><span>客户数据分析</span><span>百万级年费客户续约</span></div></div>
+          <div class="experience"><h3>上海会畅通讯股份有限公司</h3><div class="role">产品经理</div><p>参与企业直播与视频会议 SaaS 产品设计，通过使用行为与账号规则分析输出客户数据报告，支持客户成功团队推进重点客户续约。</p><div class="result-tags"><span>企业 SaaS</span><span>客户数据分析</span><span>百万级年费客户续约</span></div></div>
         </article>
       </div>
     </section>
 
     <section class="section" id="vibe">
       <div class="section-head reveal">
-        <div><div class="section-kicker">Vibe Coding</div><h2 class="section-title">更快做出来，<br>是为了更早验证。</h2></div>
-        <p class="section-lead">Vibe Coding 对我不是“代替开发”，而是把产品判断更快变成可交互证据：让业务看得到、让研发点得动、让关键问题更早暴露。</p>
+        <div><div class="section-kicker">How I work</div><h2 class="section-title">把抽象需求，<br>变成可验证证据。</h2></div>
+        <p class="section-lead">Vibe Coding 对我是一种产品验证方法：把 PRD 中的字段规则、状态变化、异常分支和操作反馈还原为可点击原型，让业务与研发更早发现理解偏差。</p>
       </div>
       <div class="vibe-board reveal">
-        <div class="vibe-thesis"><blockquote>从一份复杂 PRD，走到一个可以点击、讨论、验证的产品。</blockquote><p>原型承载的不只是页面，还包括字段规则、状态变化、异常分支和操作反馈。</p></div>
+        <div class="vibe-thesis"><blockquote>原型不是效果图，是产品判断的可执行版本。</blockquote><p>公开的归档平台原型已覆盖申请、AI 处理、审批、台账和规则配置，可直接验证主链路与关键状态。</p></div>
         <div class="process">
           <div class="process-step"><span>01</span><div><strong>理解需求</strong><small>还原角色、场景、目标与约束</small></div></div>
           <div class="process-step"><span>02</span><div><strong>沉淀 PRD</strong><small>明确范围、规则、流程与异常</small></div></div>
