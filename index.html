@@ -39,9 +39,11 @@
   .section-head{display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:end; margin-bottom:56px}
   .section-kicker{color:var(--accent-2); font:600 12px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.14em; text-transform:uppercase; margin-bottom:14px; display:inline-flex; align-items:center; gap:10px}
   .section-kicker::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--accent-2)}
-  .section-title{margin:0; font-size:clamp(30px,4.6vw,56px); line-height:1.06; letter-spacing:-.035em; font-weight:800; color:var(--ink)}
+  .section-title{margin:0; font-size:clamp(32px,4.4vw,52px); line-height:1.08; letter-spacing:-.04em; font-weight:800; color:var(--ink)}
   .section-title em{font-style:normal; color:var(--accent-2-deep)}
-  .section-lead{color:var(--muted); font-size:17px; max-width:460px; margin:0}
+  .section-lead{color:var(--muted); font-size:17px; max-width:540px; margin:0}
+  #experience .section-head{grid-template-columns:360px minmax(0,1fr)}
+  #experience .section-lead{max-width:545px; justify-self:end; text-align:left}
 
   /* nav */
   .nav{position:fixed; top:18px; left:50%; width:min(calc(100% - 32px),1120px); transform:translateX(-50%); z-index:50;
@@ -60,14 +62,14 @@
   .burger{display:none; background:none; border:0; color:var(--ink); padding:8px}
 
   /* hero */
-  .hero{min-height:100vh; display:flex; align-items:center; padding:120px 0 80px; position:relative}
+  .hero{min-height:100vh; display:flex; align-items:center; padding:96px 0 104px; position:relative}
   .hero-grid{display:grid; grid-template-columns:1.15fr .55fr .8fr; gap:40px; align-items:center; width:100%}
-  .hero h1{font-size:clamp(32px,4.4vw,52px); line-height:1.08; letter-spacing:-.04em; margin:0 0 14px; font-weight:800; color:var(--ink)}
+  .hero h1{font-size:clamp(32px,4.4vw,52px); line-height:1.12; letter-spacing:-.04em; margin:0 0 18px; font-weight:800; color:var(--ink); transform:translateY(-11px)}
   .hero h1 .accent{color:var(--accent-2-deep)}
-  .hero .role{color:var(--accent-2); font:600 13px ui-monospace,monospace; letter-spacing:.16em; text-transform:uppercase; margin-bottom:26px}
-  .hero .pitch{color:var(--muted); font-size:19px; max-width:560px; margin:0 0 14px; line-height:1.6}
-  .hero .pitch:last-child{margin-bottom:36px}
-  .hero .cta-row{display:flex; gap:14px; flex-wrap:wrap}
+  .hero .role{color:var(--accent-2); font:600 13px ui-monospace,monospace; letter-spacing:.16em; text-transform:uppercase; margin-bottom:26px; transform:translateY(-11px)}
+  .hero .pitch{color:var(--muted); font-size:19px; max-width:560px; margin:0 0 4px; line-height:1.45}
+  .hero .pitch:last-child{margin-bottom:40px}
+  .hero .cta-row{display:flex; gap:14px; flex-wrap:wrap; transform:translateY(19px)}
   .btn{display:inline-flex; align-items:center; gap:10px; padding:13px 22px; border-radius:12px; font-weight:600; font-size:15px; border:1px solid transparent; transition:.2s; white-space:nowrap}
   .btn .arrow{transition:transform .2s}
   .btn:hover .arrow{transform:translate(2px,-2px)}
@@ -140,7 +142,8 @@
   .case .badge{display:inline-flex; align-items:center; gap:6px; margin-left:12px; padding:4px 10px; border-radius:999px; font:600 11px ui-monospace,monospace; letter-spacing:.06em; color:var(--amber); background:#FEF3C7; border:1px solid #FCD34D}
   .case .badge::before{content:""; width:6px; height:6px; border-radius:50%; background:currentColor; animation:pulse 1.6s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-  .case h3{margin:18px 0 16px; font-size:clamp(26px,3.8vw,44px); line-height:1.1; letter-spacing:-.035em; font-weight:800; color:var(--ink)}
+  .case h3{margin:18px 0 16px; font-size:clamp(24px,2.5vw,32px); line-height:1.15; letter-spacing:-.03em; font-weight:800; color:var(--ink)}
+  .case h3 .desensitized{font:500 13px ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:0; color:var(--muted-2); white-space:nowrap; vertical-align:middle}
   .case-summary{margin:0; max-width:680px; color:var(--muted); font-size:17px}
   .case-meta{display:grid; grid-template-columns:1fr 1fr; gap:1px; border:1px solid var(--line); background:var(--line); border-radius:12px; overflow:hidden}
   .meta-item{padding:14px 16px; background:var(--card-2)}
@@ -197,7 +200,7 @@
   .pq-head{margin-bottom:36px}
   .pq-head .pq-kicker{color:var(--accent-2); font:600 12px ui-monospace,monospace; letter-spacing:.14em; text-transform:uppercase; margin-bottom:14px; display:inline-flex; align-items:center; gap:10px}
   .pq-head .pq-kicker::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--accent-2)}
-  .pq-head h3{margin:0; font-size:clamp(26px,3.6vw,42px); line-height:1.12; letter-spacing:-.03em; font-weight:800; color:var(--ink)}
+  .pq-head h3{margin:0; font-size:clamp(24px,2.5vw,32px); line-height:1.15; letter-spacing:-.03em; font-weight:800; color:var(--ink)}
   .pq-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
   .pq-card{position:relative; padding:22px 18px 18px; border:1px solid var(--line); border-radius:14px; background:var(--card-2); transition:.2s; display:flex; flex-direction:column}
   .pq-card:hover{border-color:var(--accent-line); transform:translateY(-2px); box-shadow:var(--shadow-hover)}
@@ -218,12 +221,12 @@
 }
 
 /* experience timeline */
-.timeline{position:relative; padding-left:0; max-width:920px; margin:0 auto}
-.timeline::before{content:""; position:absolute; left:140px; top:8px; bottom:8px; width:2px; background:var(--line)}
-.exp{position:relative; padding:0 0 44px 0; display:grid; grid-template-columns:120px 40px minmax(0,720px); gap:0}
+.timeline{position:relative; padding-left:0; max-width:960px; margin:0 auto 0 24px}
+.timeline::before{content:""; position:absolute; left:164px; top:8px; bottom:8px; width:2px; background:var(--line)}
+.exp{position:relative; padding:0 0 44px 0; display:grid; grid-template-columns:144px 40px minmax(0,720px); gap:0}
 .exp:last-child{padding-bottom:0}
-.exp::before{content:""; position:absolute; left:130px; top:6px; width:20px; height:20px; border-radius:50%; background:var(--bg); border:2px solid var(--accent-2)}
-.exp-time{grid-column:1; text-align:right; padding-right:16px; color:var(--muted-2); font:500 13px ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.03em; padding-top:6px}
+.exp::before{content:""; position:absolute; left:154px; top:6px; width:20px; height:20px; border-radius:50%; background:var(--bg); border:2px solid var(--accent-2)}
+.exp-time{grid-column:1; text-align:right; padding-right:12px; color:var(--muted-2); font:500 13px ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.03em; padding-top:6px; white-space:nowrap}
 .exp-body{grid-column:3; min-width:0}
 .exp .exp-head{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:6px}
 .exp .exp-head h3{margin:0; font-size:21px; letter-spacing:-.02em; color:var(--ink)}
@@ -238,12 +241,12 @@
 .exp .result p{margin:6px 0 0; color:#6B5B12; font-size:14px}
 
   /* contact */
-  .contact{padding:100px 0 64px; text-align:center}
-  .contact .ck{color:var(--accent-2); font:600 12px ui-monospace,monospace; letter-spacing:.16em; text-transform:uppercase; margin-bottom:16px}
-  .contact h2{font-size:clamp(32px,5vw,58px); letter-spacing:-.035em; margin:0 0 14px; font-weight:800; color:var(--ink)}
+  .contact{padding:104px 0 108px; text-align:center}
+  .contact .ck{color:var(--accent-2); font:600 12px ui-monospace,monospace; letter-spacing:.16em; text-transform:uppercase; margin-bottom:16px; transform:translateY(-11px)}
+  .contact h2{font-size:clamp(32px,4.4vw,52px); line-height:1.14; letter-spacing:-.04em; margin:0 0 28px; font-weight:800; color:var(--ink); transform:translateY(-11px)}
   .contact h2 em{font-style:normal; color:var(--accent-2-deep)}
   .contact p{color:var(--muted); font-size:17px; max-width:520px; margin:0 auto 32px}
-  .contact .links{display:flex; gap:16px; justify-content:center; flex-wrap:wrap}
+  .contact .links{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; transform:translateY(38px)}
   .contact-card{flex:1 1 0; min-width:200px; max-width:280px; display:inline-flex; align-items:center; gap:12px; padding:16px 22px; border:1px solid var(--line); border-radius:12px; background:var(--card); transition:.2s; box-shadow:var(--shadow)}
   .contact-card:hover{border-color:var(--accent-2); transform:translateY(-2px); box-shadow:var(--shadow-hover)}
   .contact-card .ic{width:38px; height:38px; border-radius:10px; display:grid; place-items:center; background:var(--accent-2-soft); color:var(--accent-2)}
@@ -259,14 +262,16 @@
   /* responsive */
 @media(max-width:920px){
   .section-head,.hero-grid,.case-top,.detail-grid,.edu-grid{grid-template-columns:1fr}
+  #experience .section-head{grid-template-columns:1fr}
+  #experience .section-lead{justify-self:start; text-align:left}
   .cap-grid{grid-template-columns:1fr 1fr}
   .module-map{grid-template-columns:1fr}
   .product-modules{grid-template-columns:1fr 1fr}
   .metrics-strip{grid-template-columns:1fr 1fr}
-  .timeline{max-width:none}
-  .timeline::before{left:100px}
-  .exp{grid-template-columns:90px 30px minmax(0,1fr)}
-  .exp::before{left:85px; width:16px; height:16px}
+  .timeline{max-width:none; margin-left:0}
+  .timeline::before{left:115px}
+  .exp{grid-template-columns:105px 30px minmax(0,1fr)}
+  .exp::before{left:100px; width:16px; height:16px}
   .exp-time{padding-right:10px; font-size:12px; padding-top:4px}
   .nav .links{display:none}
   .nav .links.open{display:flex; position:absolute; top:64px; left:0; right:0; flex-direction:column; padding:14px; background:rgba(255,255,255,.97); border:1px solid var(--line); border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,.08)}
@@ -412,7 +417,7 @@
         <div class="case-top">
           <div>
             <div class="case-label">CASE 01 / B2B PLATFORM</div>
-            <h3>企业文档归档中台</h3>
+            <h3>企业文档归档中台 <span class="desensitized">(已脱敏)</span></h3>
             <p class="case-summary">面向企业多来源、多类型文档归档场景，从 0 到 1 建设集团级电子文件归集后台，提供前置归集、标准化整理与归档质量管控能力，以申请为入口串联上传、审批与台账，构建高质量档案数据门禁。</p>
           </div>
           <div class="case-meta">
@@ -613,34 +618,6 @@
             </div>
           </div>
 
-          <div class="detail-grid">
-            <div class="detail-block">
-              <h5>全链路覆盖</h5>
-              <ul>
-                <li><b>前端交互：</b>会话界面、状态管理与用户端体验。</li>
-                <li><b>后端代码：</b>接口服务与业务逻辑实现。</li>
-                <li><b>权限管理：</b>用户与角色权限体系设计。</li>
-                <li><b>数据存储：</b>会话与业务数据持久化方案。</li>
-              </ul>
-            </div>
-            <div class="detail-block">
-              <h5>Agent 与部署</h5>
-              <ul>
-                <li><b>Agent 搭建：</b>大模型客服 Agent + 工作流编排。</li>
-                <li><b>云服务器部署：</b>真实线上环境部署与运维。</li>
-                <li><b>Vibe Coding：</b>用 AI 辅助编码加速全栈交付。</li>
-                <li><b>目标：</b>从需求到上线，1 人完成可用的真实系统。</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="metrics-strip">
-            <div class="metric"><div class="m-val">1</div><div class="m-lab">独立完成人数</div></div>
-            <div class="metric"><div class="m-val">6</div><div class="m-lab">全链路环节</div></div>
-            <div class="metric"><div class="m-val">WIP</div><div class="m-lab">正在开发中</div></div>
-            <div class="metric"><div class="m-val">∞</div><div class="m-lab">待补充上线成果</div></div>
-          </div>
-
           <div class="case-link-row">
             <span class="btn btn-ghost" style="cursor:default; opacity:.7">项目正在开发中，完成后将补充上线地址与成果</span>
           </div>
@@ -657,37 +634,37 @@
             <div class="pq-num">01</div>
             <div class="pq-arrow">↘</div>
             <h4>解决什么业务问题？</h4>
-            <p>把分散文档纳入统一申请、审批、归档流程，用 AI 辅助分类、提取与归档前校验，减少标准不一、过程难追溯的问题。</p>
+            <p>统一申请、审批与归档流程，用 AI 辅助分类、提取和归档前校验。</p>
           </div>
           <div class="pq-card">
             <div class="pq-num">02</div>
             <div class="pq-arrow">↘</div>
             <h4>知识与数据，从哪里来？</h4>
-            <p>业务知识来自档案目录、分类规则、提取规则与校验规则；数据来自人员、组织、法人、项目主数据及用户上传文件，保证输入可追溯。</p>
+            <p>规则来自档案目录、分类、提取与校验规则；数据来自主数据和用户上传文件。</p>
           </div>
           <div class="pq-card">
             <div class="pq-num">03</div>
             <div class="pq-arrow">↘</div>
             <h4>规则与知识，最终由谁维护？</h4>
-            <p>把分类、提取、校验逻辑沉淀为可配置规则，业务方可自主维护匹配依据、适用范围与启停状态，不再依赖开发改代码。</p>
+            <p>将分类、提取、校验沉淀为可配置规则，业务可维护适用范围与启停状态。</p>
           </div>
           <div class="pq-card">
             <div class="pq-num">04</div>
             <div class="pq-arrow">↘</div>
             <h4>用户如何确认结果，并继续下一步？</h4>
-            <p>为 AI 结果标注来源、置信度和待确认项，支持人工修正、重新处理或提交审批，让用户清楚当前状态与下一步动作。</p>
+            <p>标注来源、置信度和待确认项；支持人工修正、重新处理或提交审批。</p>
           </div>
           <div class="pq-card">
             <div class="pq-num">05</div>
             <div class="pq-arrow">↘</div>
             <h4>异常如何处理？</h4>
-            <p>低置信度结果支持人工修正与重新提取；校验失败可替换文件或提交说明；Agent 连续失败/超时自动转人工复核。</p>
+            <p>低置信度可人工修正或重新提取；校验失败可替换文件或说明后转人工复核。</p>
           </div>
           <div class="pq-card">
             <div class="pq-num">06</div>
             <div class="pq-arrow">↘</div>
             <h4>效果怎样评测？</h4>
-            <p>不只跑模型指标，而以真实样本为准，检查分类/字段确认率、6 维 12 项校验可解释性、异常可恢复性与审批主流程连续性。</p>
+            <p>以真实样本检查分类与字段确认、校验可解释、异常可恢复和主流程连续性。</p>
           </div>
         </div>
       </div>
@@ -715,9 +692,9 @@
             <span class="co">· 北控水务（中国）投资有限公司</span>
           </div>
           <div class="exp-meta">国有控股上市水务集团旗下，中国水环境治理领域领军企业</div>
-          <p>主导公司非结构化文档统一归档系统建设，负责 AI 文档处理能力（校验、分类、提取）落地，并跟踪上线效果持续优化。</p>
+          <p>主导集团归档系统建设，负责 AI 文档处理（智能校验、分类、提取）落地，并跟踪上线效果持续优化。</p>
           <ul>
-            <li><b>系统建设（0-1）：</b>覆盖需求分析、产品设计、交互原型、测试及上线全流程，通过 Vibe Coding 实现 HTML 交互原型快速验证。</li>
+            <li><b>系统建设（0-1）：</b>覆盖系统规划、方案设计、测试验收、上线培训、优化迭代等全流程闭环管理。</li>
             <li><b>AI 应用落地：</b>构建面向上千类文件的规则体系，负责 AI 校验、自动分类和关键信息提取能力建设。</li>
             <li><b>数据分析与迭代：</b>监控 Agent 执行状态与处理结果，基于成功率与异常数据优化提示词与规则策略。</li>
             <li><b>项目管理：</b>负责项目全生命周期管理，推动跨部门协作，保障系统按计划高质量交付。</li>
@@ -737,17 +714,15 @@
             <span class="co">· 乐飞天下信息技术（北京）有限公司</span>
           </div>
           <div class="exp-meta">国际机票代理商（OTA 合作：携程 / 飞猪 / 去哪儿 / 同程 / 美团）</div>
-          <p>负责 ERP 系统报价、订单出票、财务对账等主营业务模块；担任产研敏捷团队 PO，管理需求优先级与迭代计划。</p>
+          <p>负责 ERP 系统报价、订单出票、财务对账等主营业务模块；担任产研敏捷团队 PO。</p>
           <ul>
-            <li><b>后台产品：</b>独立完成需求挖掘与分析、方案设计与规划、功能测试与验收、上线跟踪与反馈。</li>
-            <li><b>敏捷 PO：</b>精确管理产品需求与优先级，制定迭代开发计划，协调团队与部门合作。</li>
-            <li><b>项目一：</b>从 0-1 设计机票行李自动出票流程，将二次行李订单由手动转为自动出票。</li>
-            <li><b>项目二：</b>主导公司退税流程线上化，集成业务规则维护、客服退票处理、财务收款确认等多角色。</li>
-            <li><b>项目三：</b>设计并实施财务自动对账系统，覆盖上下游对账流程。</li>
+            <li><b>后台产品：</b>独立负责需求挖掘与分析、方案设计与规划、功能测试与验收、上线跟踪与反馈。</li>
+            <li><b>敏捷 PO：</b>精确管理产品需求与优先级，制定迭代开发计划，把控团队开发进度。</li>
+            <li><b>项目管理：</b>协调跨部门资源，推动项目进度，监控数据指标，对项目生命周期以及交付结果负责。</li>
           </ul>
           <div class="result">
             <small>核心成果</small>
-            <p>行李自动出票释放客服团队 50% 人力；退税流程线上化提升跨部门效率；财务对账从手工优化至一键自动化。</p>
+            <p>设计行李自动出票流程，释放客服团队 50% 人力；负责并实施财务自动对账，从手工优化至一键自动对账。</p>
           </div>
         </div>
       </div>
@@ -762,8 +737,8 @@
           <div class="exp-meta">云视频会议领域首家上市公司，超 200 万付费用户 SaaS 平台</div>
           <p>负责客户数据运营分析与客户生命周期管理，以及企业直播平台需求分析与功能设计。</p>
           <ul>
-            <li><b>客户续签：</b>完善业务关键指标，分析到期客户账号用量与规则，提供客户数据报告，助力客户成功团队续签。</li>
-            <li><b>产品设计：</b>负责企业直播平台需求分析、功能设计并持续优化，与研发、市场、业务密切配合保障功能如期上线。</li>
+            <li><b>客户续签：</b>完善业务关键指标，分析到期客户账号用量与规则，助力客户成功团队续签。</li>
+            <li><b>产品设计：</b>负责企业直播平台优化，与研发、市场、业务密切配合保障功能如期上线。</li>
             <li><b>业务支持：</b>负责业务功能培训，完善用户操作手册与接口文档，活动文案撰写、App 上架与英文版本翻译。</li>
           </ul>
           <div class="result">
@@ -820,17 +795,25 @@
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // 导航 active 状态（scroll spy）
-  const navLinks=document.querySelectorAll('.nav .links a:not(.cta)');
+  // 导航 active 状态（scroll spy）：以导航下方的阅读位置为准，点击与自然滚动保持一致。
+  const navLinks=document.querySelectorAll('.nav .links a');
   const spyIds=['about','capabilities','projects','experience','contact'];
-  const spy=new IntersectionObserver((es)=>{
-    es.forEach(e=>{
-      if(e.isIntersecting){
-        navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href').slice(1)===e.target.id));
-      }
-    });
-  },{threshold:.25,rootMargin:'-80px 0px -50% 0px'});
-  spyIds.forEach(id=>{const el=document.getElementById(id); if(el)spy.observe(el);});
+  const setActiveNav=(id)=>navLinks.forEach(a=>{
+    const active=a.getAttribute('href').slice(1)===id;
+    a.classList.toggle('active',active);
+    if(active) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+  });
+  const syncActiveNav=()=>{
+    const marker=window.scrollY+Math.min(window.innerHeight*.34,260);
+    let current=spyIds[0];
+    spyIds.forEach(id=>{ const section=document.getElementById(id); if(section&&section.offsetTop<=marker) current=id; });
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) current='contact';
+    setActiveNav(current);
+  };
+  navLinks.forEach(a=>a.addEventListener('click',()=>setActiveNav(a.getAttribute('href').slice(1))));
+  window.addEventListener('scroll',syncActiveNav,{passive:true});
+  window.addEventListener('resize',syncActiveNav);
+  syncActiveNav();
 
   // 移动端菜单
   const burger=document.getElementById('burger'), navlinks=document.getElementById('navlinks');
