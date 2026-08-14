@@ -1,0 +1,6 @@
+# 本地项目数据，不进仓库
+.workbuddy/
+
+# assets 里只保留站点引用的 avatar.png，其余 AI 中间产物图忽略
+assets/*.png
+!assets/avatar.png
