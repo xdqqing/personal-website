@@ -63,7 +63,7 @@
 
   /* hero */
   .hero{min-height:100vh; display:flex; align-items:center; padding:96px 0 104px; position:relative}
-  .hero-grid{display:grid; grid-template-columns:1.15fr .55fr .8fr; gap:40px; align-items:center; width:100%}
+  .hero-grid{display:grid; grid-template-columns:1.15fr .55fr .8fr; gap:40px; align-items:center; width:100%; transform:translateY(30px)}
   .hero h1{font-size:clamp(32px,4.4vw,52px); line-height:1.12; letter-spacing:-.04em; margin:0 0 18px; font-weight:800; color:var(--ink); transform:translateY(-11px)}
   .hero h1 .accent{color:var(--accent-2-deep)}
   .hero .role{color:var(--accent-2); font:600 13px ui-monospace,monospace; letter-spacing:.16em; text-transform:uppercase; margin-bottom:26px; transform:translateY(-11px)}
@@ -399,7 +399,7 @@
           <div>
             <div class="case-label">CASE 01 / B2B PLATFORM</div>
             <h3>企业文档归档中台 <span class="desensitized">(已脱敏)</span></h3>
-            <p class="case-summary">面向企业多来源、多类型文档归档场景，从 0 到 1 建设集团级电子文件归集后台，提供前置归集、标准化整理与归档质量管控能力，以申请为入口串联上传、审批与台账，构建高质量档案数据门禁。</p>
+            <p class="case-summary">面向企业多来源、多类型非结构化文档归档场景，从 0 到 1 搭建集团统一归档后台，覆盖上传申请、审批流转、电子文件台账、归档标准与权限管理，构建高质量档案数据门禁。</p>
           </div>
           <div class="case-meta">
             <div class="meta-item"><small>角色</small><b>产品经理（0→1 主导）</b></div>
@@ -445,9 +445,9 @@
 
           <div class="metrics-strip">
             <div class="metric"><div class="m-val">0→1</div><div class="m-lab">从规划到上线完整建设</div></div>
-            <div class="metric"><div class="m-val">5</div><div class="m-lab">核心功能模块</div></div>
-            <div class="metric"><div class="m-val">8</div><div class="m-lab">核心页面</div></div>
-            <div class="metric"><div class="m-val">1+1</div><div class="m-lab">审批状态与归档状态双轨建模</div></div>
+            <div class="metric"><div class="m-val">6</div><div class="m-lab">核心功能模块</div></div>
+            <div class="metric"><div class="m-val">4</div><div class="m-lab">关键主数据</div></div>
+            <div class="metric"><div class="m-val">7+4</div><div class="m-lab">审批状态与归档状态双轨建模</div></div>
           </div>
 
           <div class="case-link-row">
@@ -487,8 +487,8 @@
             <div class="module">
               <div class="m-num">AI · 01</div>
               <h4>AI 智能分类</h4>
-              <p>上传后自动匹配档案目录中的资料类型，由底座反查三级分类并回填清单；支持两种识别模式与 LangGraph 工作流。</p>
-              <div class="m-tags"><span>资料类型匹配</span><span>分类+提取</span><span>仅提取</span><span>LangGraph</span></div>
+              <p>上传后自动匹配档案目录中的资料类型，由底座反查三级分类并回填清单；支持两种识别模式与 Agent 工作流。</p>
+              <div class="m-tags"><span>资料类型匹配</span><span>分类+提取</span><span>仅提取</span><span>Agent 工作流</span></div>
             </div>
             <div class="module">
               <div class="m-num">AI · 02</div>
@@ -534,7 +534,7 @@
           <div>
             <div class="case-label">CASE 03 / PERSONAL PROJECT<span class="badge">开发中</span></div>
             <h3>AI 客服系统</h3>
-            <p class="case-summary">一个人打造真实线上可用的智能客服系统，覆盖前端交互、后端代码、权限管理、数据存储、Agent 搭建到云服务器部署的全链路实现——用 Vibe Coding 验证全栈交付能力。</p>
+            <p class="case-summary">一个人打造真实线上可用的智能客服系统，计划覆盖前端交互、后端代码、权限管理、数据存储、Agent 搭建到云服务器部署，正在验证从前端到 Agent 的完整链路。</p>
           </div>
           <div class="case-meta">
             <div class="meta-item"><small>角色</small><b>产品 + 全栈 + Agent</b></div>
@@ -544,40 +544,8 @@
           </div>
         </div>
 
-        <button class="btn btn-ghost case-toggle" type="button" aria-expanded="false">展开项目拆解 <span class="arrow">↓</span></button>
-
-        <div class="case-details">
-          <div class="principles">
-            <span>真实可用，非 Demo</span>
-            <span>1 人全链路</span>
-            <span>Vibe Coding 驱动</span>
-            <span>云端部署</span>
-          </div>
-
-          <div class="module-map">
-            <div class="module">
-              <div class="m-num">LAYER 01</div>
-              <h4>前端交互</h4>
-              <p>客服会话界面、会话状态管理与用户端交互体验。</p>
-              <div class="m-tags"><span>会话 UI</span><span>状态管理</span><span>响应式</span></div>
-            </div>
-            <div class="module">
-              <div class="m-num">LAYER 02</div>
-              <h4>后端服务</h4>
-              <p>接口服务、业务逻辑与会话数据流转处理。</p>
-              <div class="m-tags"><span>API</span><span>业务逻辑</span><span>数据流转</span></div>
-            </div>
-            <div class="module">
-              <div class="m-num">LAYER 03</div>
-              <h4>Agent 搭建</h4>
-              <p>基于大模型构建客服 Agent，设计工作流与提示词策略。</p>
-              <div class="m-tags"><span>大模型</span><span>工作流</span><span>Prompt</span></div>
-            </div>
-          </div>
-
-          <div class="case-link-row">
-            <span class="btn btn-ghost" style="cursor:default; opacity:.7">项目正在开发中，完成后将补充上线地址与成果</span>
-          </div>
+        <div class="case-link-row">
+          <span class="btn btn-ghost" style="cursor:default; opacity:.7">项目正在开发中，完成后将补充上线地址与成果。</span>
         </div>
       </article>
 
