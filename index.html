@@ -99,8 +99,9 @@
 
   /* hero photo */
   .hero-photo{display:flex; flex-direction:column; align-items:center; gap:14px}
-  .hero-photo .photo-frame{width:200px; height:260px; border-radius:20px; overflow:hidden; border:3px solid var(--ink); box-shadow:0 8px 30px rgba(0,0,0,.08); position:relative}
-  .hero-photo .photo-frame svg{width:100%; height:100%; display:block}
+  .hero-photo .photo-frame{width:220px; background:transparent; border:none; border-radius:0; box-shadow:none; position:relative; transform:rotate(-1deg); transition:transform .35s ease, filter .35s ease; filter:drop-shadow(0 12px 24px rgba(45,45,45,.08)); margin-top:4cm; margin-left:-0.3cm}
+  .hero-photo .photo-frame:hover{transform:rotate(-1deg); filter:drop-shadow(0 12px 24px rgba(45,45,45,.08))}
+  .hero-photo .photo-frame img{width:100%; height:auto; display:block}
   .hero-photo .photo-note{font:500 11px ui-monospace,monospace; color:var(--muted-2); letter-spacing:.08em}
 
   /* capability */
@@ -277,7 +278,7 @@
   .nav .links.open{display:flex; position:absolute; top:64px; left:0; right:0; flex-direction:column; padding:14px; background:rgba(255,255,255,.97); border:1px solid var(--line); border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,.08)}
   .burger{display:block}
   .case{padding:26px 20px}
-  .hero-photo .photo-frame{width:160px; height:210px}
+  .hero-photo .photo-frame{width:170px; transform:rotate(-1deg)}
   .hero-photo{order:-1; margin-bottom:8px}
 }
   @media(max-width:560px){
@@ -320,28 +321,8 @@
     </div>
     <div class="hero-photo">
       <div class="photo-frame">
-        <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#EDF7F0"/>
-              <stop offset="100%" stop-color="#EEF4FA"/>
-            </linearGradient>
-          </defs>
-          <rect width="200" height="260" fill="url(#bg-grad)"/>
-          <path d="M25 260 Q25 185 100 170 Q175 185 175 260Z" fill="#F2C94C"/>
-          <rect x="90" y="138" width="20" height="42" rx="6" fill="#FFD4B8"/>
-          <ellipse cx="100" cy="108" rx="40" ry="46" fill="#FFD4B8"/>
-          <path d="M60 108 Q60 60 100 60 Q140 60 140 108 Q140 85 125 78 Q112 68 100 68 Q88 68 75 78 Q60 85 60 108Z" fill="#2D1810"/>
-          <rect x="70" y="96" width="22" height="16" rx="5" fill="rgba(255,255,255,0.3)" stroke="#1A1A1A" stroke-width="1.8"/>
-          <rect x="108" y="96" width="22" height="16" rx="5" fill="rgba(255,255,255,0.3)" stroke="#1A1A1A" stroke-width="1.8"/>
-          <line x1="92" y1="104" x2="108" y2="104" stroke="#1A1A1A" stroke-width="1.8"/>
-          <circle cx="81" cy="104" r="2" fill="#1A1A1A"/>
-          <circle cx="119" cy="104" r="2" fill="#1A1A1A"/>
-          <path d="M86 126 Q100 134 114 126" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
-          <path d="M84 170 L100 188 L116 170" fill="none" stroke="#FFF" stroke-width="2"/>
-        </svg>
+        <img src="assets/avatar.png?v=20260814-10" alt="王冬青 · 个人照片">
       </div>
-      <div class="photo-note">卡通占位 · 待替换</div>
     </div>
     <aside class="console" aria-label="能力概览">
       <div class="c-top"><span class="pdot"></span><span>个人信息 · 在线</span></div>
@@ -520,30 +501,6 @@
               <h4>AI 校验</h4>
               <p>归档前的智能质量门禁，嵌入审批第一节点，输出问题位置、依据与修改建议，支持替换文件或填写说明后重新提交。</p>
               <div class="m-tags"><span>6 维度</span><span>12 检查项</span><span>风险等级</span><span>整改闭环</span></div>
-            </div>
-          </div>
-
-          <div class="detail-grid">
-            <div class="detail-block">
-              <h5>AI 校验 · 规则体系</h5>
-              <ul>
-                <li><b>要素完备性：</b>基础信息齐全、核心内容齐全。</li>
-                <li><b>信息一致性：</b>文档内部、附件与正文、系统录入一致。</li>
-                <li><b>合规性：</b>签章合规、制度合规、文件相似度。</li>
-                <li><b>时效逻辑：</b>日期合规、有效期合规。</li>
-                <li><b>质量规范：</b>图像质量、格式完整达标。</li>
-                <li><b>页码/附件完整性：</b>页码连续、附件齐全。</li>
-              </ul>
-            </div>
-            <div class="detail-block">
-              <h5>分类与提取 · 机制</h5>
-              <ul>
-                <li><b>两种识别模式：</b>匹配档案目录+提取关键信息 / 仅提取关键信息。</li>
-                <li><b>规则依赖链：</b>档案目录 → 分类规则库 → AI 提取规则库 → 提取日志。</li>
-                <li><b>置信度治理：</b>低置信度不回填，跳过已人工修改字段，支持人工修正与重新提取。</li>
-                <li><b>状态可见：</b>排队中 / AI 识别中 / 识别成功，字段带 AI 置信度与来源标记。</li>
-                <li><b>可追溯：</b>AI 提取日志记录原始值、人工修正与提交结果类型。</li>
-              </ul>
             </div>
           </div>
 
