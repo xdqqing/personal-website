@@ -63,12 +63,12 @@
 
   /* hero */
   .hero{min-height:100vh; display:flex; align-items:center; padding:96px 0 104px; position:relative}
-  .hero-grid{display:grid; grid-template-columns:1fr .95fr .75fr; gap:32px; align-items:center; width:100%; transform:translateY(30px)}
+  .hero-grid{display:grid; grid-template-columns:370px minmax(0,1fr) 310px; gap:32px; align-items:center; width:100%; transform:translateY(30px)}
   .hero-grid > div:first-child{transform:translateY(-30px)}
-  .hero h1{font-size:clamp(27px,2.9vw,38px); line-height:1.18; letter-spacing:-.03em; margin:0 0 14px; font-weight:800; color:var(--ink)}
+  .hero h1{font-size:clamp(27px,2.9vw,38px); line-height:1.18; letter-spacing:-.03em; margin:0 0 14px; max-width:370px; font-weight:800; color:var(--ink)}
   .hero h1 .accent{color:var(--accent-2-deep)}
   .hero .role{color:var(--accent-2); font:600 13px ui-monospace,monospace; letter-spacing:.15em; text-transform:uppercase; margin-bottom:18px}
-  .hero .pitch{color:var(--muted); font-size:16px; max-width:560px; margin:0 0 4px; line-height:1.5}
+  .hero .pitch{color:var(--muted); font-size:16px; max-width:350px; margin:0 0 4px; line-height:1.5}
   .hero .pitch:last-child{margin-bottom:0}
   .btn{display:inline-flex; align-items:center; gap:10px; padding:13px 22px; border-radius:12px; font-weight:600; font-size:15px; border:1px solid transparent; transition:.2s; white-space:nowrap}
   .btn .arrow{transition:transform .2s}
@@ -101,7 +101,7 @@
   .hero-photo{display:flex; flex-direction:column; align-items:center; gap:14px; align-self:stretch}
   .hero-photo .photo-frame{width:380px; background:transparent; border:none; border-radius:0; box-shadow:none; position:relative; transform:rotate(-1deg) translateY(-38px); transition:transform .35s ease, filter .35s ease; filter:drop-shadow(0 12px 24px rgba(45,45,45,.08)); margin-top:0; margin-left:0}
   .hero-photo .photo-frame:hover{transform:rotate(-1deg) translateY(-38px); filter:drop-shadow(0 12px 24px rgba(45,45,45,.08))}
-  .hero-photo .photo-frame img{width:100%; height:auto; display:block;
+  .hero-photo .photo-frame img{width:100%; height:auto; display:block; transform:translateX(-12px);
     -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.45) 88%,transparent 100%);
     mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.45) 88%,transparent 100%)}
   .hero-photo .photo-note{font:500 11px ui-monospace,monospace; color:var(--muted-2); letter-spacing:.08em}
@@ -281,6 +281,7 @@
   .burger{display:block}
   .case{padding:26px 20px}
   .hero-photo .photo-frame{width:240px; transform:rotate(-1deg)}
+  .hero-photo .photo-frame img{transform:none}
   .hero-photo{order:-1; margin-bottom:8px}
 }
   @media(max-width:560px){
