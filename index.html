@@ -62,13 +62,12 @@
   .burger{display:none; background:none; border:0; color:var(--ink); padding:8px}
 
   /* hero */
-  .hero{min-height:100vh; display:flex; align-items:center; padding:96px 0 104px; position:relative}
-  .hero-grid{display:grid; grid-template-columns:370px minmax(0,1fr) 310px; gap:32px; align-items:center; width:100%; transform:translateY(30px)}
-  .hero-grid > div:first-child{transform:translateY(-30px)}
-  .hero h1{font-size:clamp(27px,2.9vw,38px); line-height:1.18; letter-spacing:-.03em; margin:0 0 14px; max-width:370px; font-weight:800; color:var(--ink)}
-  .hero h1 .accent{color:var(--accent-2-deep)}
-  .hero .role{color:var(--accent-2); font:600 13px ui-monospace,monospace; letter-spacing:.15em; text-transform:uppercase; margin-bottom:18px}
-  .hero .pitch{color:var(--muted); font-size:16px; max-width:350px; margin:0 0 4px; line-height:1.5}
+  .hero{min-height:100vh; display:flex; align-items:center; padding:96px 0 104px; position:relative; overflow:hidden}
+  .hero-grid{display:grid; grid-template-columns:370px minmax(0,1fr) 310px; gap:32px; align-items:center; width:100%; transform:translateY(30px); position:relative; z-index:1}
+  .hero-grid > div:first-child{transform:translateY(-73px); position:relative; z-index:3}
+  .hero h1{font-size:clamp(27px,2.9vw,38px); line-height:1.25; letter-spacing:-.03em; margin:0 0 18px; width:fit-content; max-width:100%; text-align:left; font-weight:800; color:var(--ink)}
+  .hero h1 .accent{color:var(--accent-2)}
+  .hero .pitch{color:#505050; font-size:15px; max-width:330px; margin:0 0 6px; line-height:1.5}
   .hero .pitch:last-child{margin-bottom:0}
   .btn{display:inline-flex; align-items:center; gap:10px; padding:13px 22px; border-radius:12px; font-weight:600; font-size:15px; border:1px solid transparent; transition:.2s; white-space:nowrap}
   .btn .arrow{transition:transform .2s}
@@ -79,18 +78,28 @@
   .btn-ghost:hover{border-color:var(--accent-2); color:var(--accent-2)}
 
   /* hero side panel - info card */
-  .console{border:1px solid var(--line); border-radius:20px; background:var(--card); padding:24px; box-shadow:var(--shadow); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px}
-  .console .c-top{display:flex; align-items:center; gap:8px; padding-bottom:14px; border-bottom:1px solid var(--line-2); margin-bottom:14px}
+  .console{padding:0; background:transparent; border:0; border-radius:0; box-shadow:none; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; position:relative; z-index:1}
+  .console .c-top{display:flex; align-items:center; gap:8px; padding-bottom:14px; border-bottom:1px solid #D9DEE4; margin-bottom:10px}
   .console .c-top .pdot{width:9px; height:9px; border-radius:50%; background:var(--green)}
   .console .c-top span{color:var(--muted); font-size:12px}
-  .console .row{display:flex; justify-content:space-between; padding:7px 0; color:var(--muted)}
-  .console .row b{color:var(--ink); font-weight:600}
-  .console .row .v-cyan{color:var(--accent-2)}
-  .console .row .v-violet{color:var(--amber)}
-  .console .row .v-green{color:var(--green)}
-  .console .edu-label{margin-top:16px; padding-top:14px; border-top:1px solid var(--line-2); color:var(--accent-2); font-size:12px; font-weight:600; letter-spacing:.06em}
-  .console .row.edu-row{background:var(--accent-2-soft); border-radius:8px; padding:8px 12px; margin:5px 0}
-  .console .row.edu-row b{color:var(--accent-2-deep)}
+  .console .profile-summary{display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:12px 0 16px; border-bottom:1px solid #D9DEE4}
+  .console .summary-item{display:flex; flex-direction:column; align-items:center; gap:11px; text-align:center}
+  .console .summary-item:last-child{align-items:center; text-align:center}
+  .console .summary-value{color:var(--ink); font-size:19px; font-weight:800; line-height:1.1}
+  .console .summary-label{color:var(--muted); font-size:11px; line-height:1.35}
+  .console .experience-years{font-size:23px; font-weight:800; letter-spacing:.04em; line-height:1}
+  .console .profile-focus{display:grid; grid-template-columns:5fr 6fr; gap:18px; padding:16px 0; border-bottom:1px solid #D9DEE4}
+  .console .focus-item{display:flex; flex-direction:column; align-items:center; gap:11px; min-width:0; text-align:center}
+  .console .focus-item:last-child{align-items:center; text-align:center}
+  .console .focus-value{color:var(--ink); font-size:14px; font-weight:800; line-height:1.45; letter-spacing:-.02em; white-space:nowrap}
+  .console .focus-item:last-child .focus-value{color:var(--amber)}
+  .console .focus-label{color:var(--muted); font-size:11px; line-height:1.35}
+  .console .edu-label{display:flex; align-items:center; gap:8px; margin-top:46px; padding-bottom:12px; border-bottom:1px solid #D9DEE4; color:var(--muted); font-size:12px; letter-spacing:.02em}
+  .console .edu-label .pdot{width:9px; height:9px; border-radius:50%; background:var(--green)}
+  .console .edu-grid{display:grid; grid-template-columns:1fr; margin-top:0; padding-bottom:11px; border-bottom:1px solid #D9DEE4}
+  .console .edu-item{display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:8px 0; border-bottom:0}
+  .console .edu-degree{color:var(--ink); font-size:13px; font-weight:800; line-height:1.35}
+  .console .edu-major{color:var(--accent-2-deep); font-size:13px; font-weight:700; line-height:1.35}
   .console .bar{height:6px; border-radius:6px; background:var(--card-2); overflow:hidden; margin-top:6px}
   .console .bar i{display:block; height:100%; background:var(--accent); border-radius:6px}
   .console .tagline{margin-top:16px; padding-top:14px; border-top:1px solid var(--line-2); color:var(--muted-2); font-size:12px; letter-spacing:.02em}
@@ -98,13 +107,20 @@
   @keyframes blink{50%{opacity:0}}
 
   /* hero photo */
-  .hero-photo{display:flex; flex-direction:column; align-items:center; gap:14px; align-self:stretch}
-  .hero-photo .photo-frame{width:380px; background:transparent; border:none; border-radius:0; box-shadow:none; position:relative; transform:rotate(-1deg) translateY(-38px); transition:transform .35s ease, filter .35s ease; filter:drop-shadow(0 12px 24px rgba(45,45,45,.08)); margin-top:0; margin-left:0}
-  .hero-photo .photo-frame:hover{transform:rotate(-1deg) translateY(-38px); filter:drop-shadow(0 12px 24px rgba(45,45,45,.08))}
+  .hero-photo{display:flex; flex-direction:column; align-items:center; gap:14px; align-self:stretch; position:relative; z-index:2}
+  .hero-photo .photo-frame{width:380px; background:transparent; border:none; border-radius:0; box-shadow:none; position:relative; isolation:isolate; transform:translate(-20px,-48px); transition:none; filter:drop-shadow(0 18px 30px rgba(45,45,45,.11)); margin-top:0; margin-left:0}
   .hero-photo .photo-frame img{width:100%; height:auto; display:block; transform:translateX(-12px);
     -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.45) 88%,transparent 100%);
     mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.45) 88%,transparent 100%)}
   .hero-photo .photo-note{font:500 11px ui-monospace,monospace; color:var(--muted-2); letter-spacing:.08em}
+
+  @media(min-width:1100px){
+    .nav{width:min(calc(100% - 32px),1196px)}
+    .hero-grid{grid-template-columns:370px minmax(0,1fr) 348px}
+    .hero-grid > div:first-child{transform:translate(-38px,-73px)}
+    .console{transform:translateX(38px)}
+    .console .c-top,.console .profile-summary,.console .profile-focus{position:relative; top:-15px}
+  }
 
   /* capability */
   .cap-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
@@ -258,6 +274,10 @@
 
   footer{padding:32px 0; border-top:1px solid var(--line); color:var(--muted-2); font-size:13px; text-align:center}
 
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; scroll-behavior:auto!important}
+  }
+
   /* reveal */
   .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease,transform .6s ease}
   .reveal.visible{opacity:1; transform:none}
@@ -280,7 +300,7 @@
   .nav .links.open{display:flex; position:absolute; top:64px; left:0; right:0; flex-direction:column; padding:14px; background:rgba(255,255,255,.97); border:1px solid var(--line); border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,.08)}
   .burger{display:block}
   .case{padding:26px 20px}
-  .hero-photo .photo-frame{width:240px; transform:rotate(-1deg)}
+  .hero-photo .photo-frame{width:240px; transform:none}
   .hero-photo .photo-frame img{transform:none}
   .hero-photo{order:-1; margin-bottom:8px}
 }
@@ -312,9 +332,8 @@
 <header class="hero" id="about">
   <div class="wrap hero-grid">
     <div>
-      <div class="role">B端产品经理 · AI产品实践者</div>
-      <h1>懂复杂业务，<br>能从 <span class="accent">0 到 1</span> 搭后台。</h1>
-      <p class="pitch">5 年 B 端产品经验，主导后台系统从规划到上线全流程。</p>
+      <h1>是，B端产品<br><span class="accent">也是，AI产品实践者</span></h1>
+      <p class="pitch">懂复杂业务，0-1主导后台系统从规划到上线。</p>
       <p class="pitch">落地 AI 文档校验、智能分类与信息提取能力。</p>
       <p class="pitch">Vibe Coding 把需求快速变成可验证的交互原型。</p>
     </div>
@@ -325,14 +344,19 @@
     </div>
     <aside class="console" aria-label="能力概览">
       <div class="c-top"><span class="pdot"></span><span>个人信息 · 在线</span></div>
-      <div class="row"><span>姓名</span><b>王冬青</b></div>
-      <div class="row"><span>角色</span><b class="v-cyan">后台 / AI 产品经理</b></div>
-      <div class="row"><span>经验</span><b class="v-cyan">5 年</b></div>
-      <div class="row"><span>领域</span><b>B端 中后台 · SaaS</b></div>
-      <div class="row"><span>聚焦</span><b class="v-violet">AI 落地 · vibe coding</b></div>
-      <div class="edu-label">教育背景</div>
-      <div class="row edu-row"><span>硕士</span><b>通信工程 · 江苏科技大学</b></div>
-      <div class="row edu-row"><span>本科</span><b>数学 · 鲁东大学</b></div>
+      <div class="profile-summary">
+        <div class="summary-item"><b class="summary-value">王冬青</b><span class="summary-label">姓名</span></div>
+        <div class="summary-item"><b class="summary-value experience-years">5年</b><span class="summary-label">产品经验</span></div>
+      </div>
+      <div class="profile-focus">
+        <div class="focus-item"><b class="focus-value">B端·中后台·SaaS</b><span class="focus-label">领域</span></div>
+        <div class="focus-item"><b class="focus-value">AI落地·vibe coding</b><span class="focus-label">聚焦</span></div>
+      </div>
+      <div class="edu-label"><span class="pdot"></span><span>教育背景 · 在线</span></div>
+      <div class="edu-grid">
+        <div class="edu-item"><span class="edu-degree">硕士</span><span class="edu-major">通信工程 · 江苏科技大学</span></div>
+        <div class="edu-item"><span class="edu-degree">本科</span><span class="edu-major">数学 · 鲁东大学</span></div>
+      </div>
     </aside>
   </div>
 </header>
