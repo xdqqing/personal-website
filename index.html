@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="王冬青，B端产品经理与AI产品实践者。专注复杂业务后台、AI能力落地与Vibe Coding快速交付。">
-<meta name="theme-color" content="#FFFCF2">
+<meta name="theme-color" content="#FCFDFE">
 <title>王冬青｜B端产品经理 · AI产品实践者</title>
 <style>
   :root{
-    --bg:#FFFCF2; --card:#FFFFFF; --card-2:#FAF8EE;
+    --bg:#FCFDFE; --card:#FFFFFF; --card-2:#F7F9FC;
     --ink:#2D2D2D; --text:#2D2D2D; --muted:#6B6B6B; --muted-2:#9B9B9B;
-    --line:#EDEAE0; --line-2:#F2F0E6;
+    --line:#E5E9EE; --line-2:#F0F3F6;
     --accent:#F2C94C; --accent-soft:#FFF7E0; --accent-line:#FDE8A8;
     --accent-2:#4A7AC4; --accent-2-deep:#3A6EB5; --accent-2-soft:#EAF2FB; --accent-2-line:#C3D6EE;
     --green:#16A34A; --amber:#D97706;
@@ -25,23 +25,6 @@
     position:relative; z-index:0;
     font-family:-apple-system,"SF Pro Display",BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",ui-sans-serif,sans-serif;
     line-height:1.7; overflow-x:hidden; -webkit-font-smoothing:antialiased;
-  }
-  body::after{
-    content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
-    background:
-      radial-gradient(ellipse 120% 72% at 50% -6%, #FFFFFF 0%, rgba(255,255,255,0) 50%),
-      radial-gradient(ellipse 135% 135% at 50% 122%, rgba(190,170,132,0.10) 0%, rgba(190,170,132,0) 58%);
-    background-attachment:fixed; background-repeat:no-repeat;
-    transform-origin:50% 0%;
-    animation:haloBreathe 8s ease-in-out infinite;
-  }
-  @keyframes haloBreathe{
-    0%,100%{opacity:.6; transform:scale(1)}
-    50%{opacity:1; transform:scale(1.12)}
-  }
-  body::before{
-    content:""; position:fixed; top:0; left:0; right:0; height:3px; z-index:0; pointer-events:none;
-    background:linear-gradient(90deg,transparent,var(--accent),transparent); opacity:.5;
   }
   a{color:inherit; text-decoration:none}
   button{font:inherit; cursor:pointer}
@@ -78,6 +61,7 @@
 
   /* hero */
   .hero{min-height:100vh; display:flex; align-items:center; padding:96px 0 104px; position:relative; overflow:hidden}
+  .hero::after{content:""; position:absolute; left:28px; right:28px; bottom:20px; height:1px; background:rgba(45,45,45,.035); pointer-events:none}
   .hero-grid{display:grid; grid-template-columns:370px minmax(0,1fr) 310px; gap:32px; align-items:center; width:100%; transform:translateY(30px); position:relative; z-index:1}
   .hero-grid > div:first-child{transform:translateY(-73px); position:relative; z-index:3}
   .hero h1{font-size:clamp(27px,2.9vw,38px); line-height:1.25; letter-spacing:-.03em; margin:0 0 18px; width:fit-content; max-width:100%; text-align:left; font-weight:800; color:var(--ink)}
@@ -98,21 +82,20 @@
   .console .c-top{display:flex; align-items:center; gap:8px; padding-bottom:14px; border-bottom:1px solid #D9DEE4; margin-bottom:10px}
   .console .c-top .pdot{width:9px; height:9px; border-radius:50%; background:var(--green)}
   .console .c-top span{color:var(--muted); font-size:12px}
-  .console .profile-summary{display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:12px 0 16px; border-bottom:1px solid #D9DEE4}
+  .console .c-top span:last-child{color:var(--accent-2); font-weight:700; letter-spacing:.12em}
+  .console .profile-summary{display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:12px 0 16px}
   .console .summary-item{display:flex; flex-direction:column; align-items:center; gap:11px; text-align:center}
   .console .summary-item:last-child{align-items:center; text-align:center}
   .console .summary-value{color:var(--ink); font-size:19px; font-weight:800; line-height:1.1}
   .console .summary-label{color:var(--muted); font-size:11px; line-height:1.35}
-  .console .experience-years{font-size:23px; font-weight:800; letter-spacing:.04em; line-height:1}
-  .console .profile-focus{display:grid; grid-template-columns:5fr 6fr; gap:18px; padding:16px 0; border-bottom:1px solid #D9DEE4}
+  .console .experience-years{font-size:19px; font-weight:800; letter-spacing:normal; line-height:1.1}
+  .console .profile-focus{display:grid; grid-template-columns:5fr 6fr; gap:18px; margin-top:8px; padding:16px 0 20px; border-bottom:1px solid #D9DEE4}
   .console .focus-item{display:flex; flex-direction:column; align-items:center; gap:11px; min-width:0; text-align:center}
   .console .focus-item:last-child{align-items:center; text-align:center}
   .console .focus-value{color:var(--ink); font-size:14px; font-weight:800; line-height:1.45; letter-spacing:-.02em; white-space:nowrap}
   .console .focus-item:last-child .focus-value{color:var(--amber)}
   .console .focus-label{color:var(--muted); font-size:11px; line-height:1.35}
-  .console .edu-label{display:flex; align-items:center; gap:8px; margin-top:46px; padding-bottom:12px; border-bottom:1px solid #D9DEE4; color:var(--muted); font-size:12px; letter-spacing:.02em}
-  .console .edu-label .pdot{width:9px; height:9px; border-radius:50%; background:var(--green)}
-  .console .edu-grid{display:grid; grid-template-columns:1fr; margin-top:0; padding-bottom:11px; border-bottom:1px solid #D9DEE4}
+  .console .edu-grid{display:grid; grid-template-columns:1fr; margin-top:26px; padding-bottom:11px; border-bottom:1px solid #D9DEE4}
   .console .edu-item{display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:8px 0; border-bottom:0}
   .console .edu-degree{color:var(--ink); font-size:13px; font-weight:800; line-height:1.35}
   .console .edu-major{color:var(--accent-2-deep); font-size:13px; font-weight:700; line-height:1.35}
@@ -124,20 +107,24 @@
 
   /* hero photo */
   .hero-photo{display:flex; flex-direction:column; align-items:center; gap:14px; align-self:stretch; position:relative; z-index:2}
-  .hero-photo .photo-frame{width:380px; background:transparent; border:none; border-radius:0; box-shadow:none; position:relative; isolation:isolate; transform:translate(-20px,-48px); animation:photoFloat 9s ease-in-out infinite; transition:none; filter:drop-shadow(0 18px 30px rgba(45,45,45,.11)); margin-top:0; margin-left:0}
+  .hero-photo .photo-frame{width:380px; background:transparent; border:none; border-radius:0; box-shadow:none; position:relative; isolation:isolate; transform:translate(-20px,-48px); transition:none; filter:drop-shadow(0 18px 30px rgba(45,45,45,.11)); margin-top:0; margin-left:0}
   .hero-photo .photo-frame img{width:100%; height:auto; display:block; transform:translateX(-12px);
-    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.45) 88%,transparent 100%);
-    mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.45) 88%,transparent 100%)}
+    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 82%,rgba(0,0,0,.45) 92%,transparent 100%);
+    mask-image:linear-gradient(to bottom,#000 0%,#000 82%,rgba(0,0,0,.45) 92%,transparent 100%)}
   .hero-photo .photo-note{font:500 11px ui-monospace,monospace; color:var(--muted-2); letter-spacing:.08em}
 
   @keyframes photoFloat{0%,100%{transform:translate(-20px,-48px)} 50%{transform:translate(-20px,-45px)}}
 
   @media(min-width:1100px){
+    .hero{min-height:calc(100vh - 34px); padding:88px 0 70px}
     .nav{width:min(calc(100% - 32px),1196px)}
     .hero-grid{grid-template-columns:370px minmax(0,1fr) 348px}
     .hero-grid > div:first-child{transform:translate(-38px,-73px)}
     .console{transform:translateX(38px)}
-    .console .c-top,.console .profile-summary,.console .profile-focus{position:relative; top:-15px}
+    .console .c-top{position:relative; top:-15px}
+    .console .profile-summary{position:relative; top:-11px}
+    .console .profile-summary .summary-value{position:relative; transform:translate(-11px, 8px)}
+    .console .profile-focus{position:relative; top:-7px}
   }
 
   /* capability */
@@ -173,6 +160,12 @@
   .case:nth-child(1)::before{background:linear-gradient(90deg,var(--accent),var(--pastel-peach) 80%)}
   .case:nth-child(2)::before{background:linear-gradient(90deg,var(--accent),var(--pastel-lav) 80%)}
   .case:nth-child(3)::before{background:linear-gradient(90deg,var(--accent),var(--pastel-blue) 80%)}
+  .case:nth-child(1) .case-meta,.case:nth-child(2) .case-meta{border-color:#DCE6F1; background:#DCE6F1}
+  .case:nth-child(1) .meta-item,.case:nth-child(2) .meta-item{background:#F4F7FB}
+  #case-aics{background:#FAFCFF; border-color:#DCE6F1}
+  #case-aics .case-meta{border-color:#DCE6F1; background:#DCE6F1}
+  #case-aics .meta-item{background:#F4F7FB}
+  #case-aics .case-link-row .btn-ghost{background:#F8FAFD; border-color:#D5E0EC; color:#536477}
   .case:hover{transform:translateY(-4px); box-shadow:0 18px 44px rgba(45,45,45,.12)}
   .case-top{display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:start}
   .case-label{display:inline-flex; gap:9px; align-items:center; color:var(--accent-2); font:600 12px ui-monospace,monospace; letter-spacing:.1em}
@@ -240,8 +233,10 @@
   .pq-head .pq-kicker::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--accent-2)}
   .pq-head h3{margin:0; font-size:clamp(24px,2.5vw,32px); line-height:1.15; letter-spacing:-.03em; font-weight:800; color:var(--ink)}
   .pq-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-  .pq-card{position:relative; padding:22px 18px 18px; border:1px solid var(--line); border-radius:14px; background:var(--card-2); transition:.2s; display:flex; flex-direction:column}
-  .pq-card:hover{border-color:var(--accent-line); transform:translateY(-2px); box-shadow:var(--shadow-hover)}
+  .pq-card{position:relative; padding:22px 18px 18px; border:1px solid #E0E7EF; border-radius:14px; background:#F9FBFE; transition:.2s; display:flex; flex-direction:column}
+  .pq-card:nth-child(3n + 2){background:#EEF5FD; border-color:#D5E4F3}
+  .pq-card:nth-child(3n){background:#F4F7FB; border-color:#DDE5EE}
+  .pq-card:hover{border-color:var(--accent-2-line); transform:translateY(-2px); box-shadow:0 8px 24px rgba(74,122,196,.10)}
   .pq-card .pq-num{position:absolute; top:14px; left:14px; width:28px; height:28px; border-radius:8px; display:grid; place-items:center; background:var(--accent); color:var(--ink); font:700 12px ui-monospace,monospace}
   .pq-card .pq-arrow{position:absolute; top:14px; right:14px; color:var(--muted-2); font-size:14px; line-height:1}
   .pq-card h4{margin:42px 0 10px; font-size:16px; line-height:1.35; letter-spacing:-.01em; color:var(--ink); font-weight:700}
@@ -274,9 +269,9 @@
 .exp ul{margin:8px 0 0; padding-left:18px; color:var(--muted); font-size:14.5px}
 .exp ul li{margin-bottom:6px}
 .exp ul li b{color:var(--ink); font-weight:600}
-.exp .result{margin-top:14px; padding:14px 16px; border-radius:10px; background:var(--accent-soft); border:1px solid var(--accent-line)}
+  .exp .result{margin-top:14px; padding:14px 16px; border-radius:10px; background:#F4F7FB; border:1px solid #D7E2EF}
 .exp .result small{color:var(--accent-2); font:600 11px ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.08em; text-transform:uppercase}
-.exp .result p{margin:6px 0 0; color:#6B5B12; font-size:14px}
+  .exp .result p{margin:6px 0 0; color:#42566E; font-size:14px}
 
   /* contact */
   .contact{padding:104px 0 108px; text-align:center}
@@ -351,7 +346,7 @@
 <header class="hero" id="about">
   <div class="wrap hero-grid">
     <div>
-      <h1>是，B端产品<br><span class="accent">也是，AI产品实践者</span></h1>
+      <h1>B 端产品<br><span class="accent">AI 产品实践者</span></h1>
       <p class="pitch">懂复杂业务，0-1主导后台系统从规划到上线。</p>
       <p class="pitch">落地 AI 文档校验、智能分类与信息提取能力。</p>
       <p class="pitch">Vibe Coding 把需求快速变成可验证的交互原型。</p>
@@ -362,16 +357,15 @@
       </div>
     </div>
     <aside class="console" aria-label="能力概览">
-      <div class="c-top"><span class="pdot"></span><span>个人信息 · 在线</span></div>
+      <div class="c-top"><span class="pdot"></span><span>ABOUT ME</span></div>
       <div class="profile-summary">
-        <div class="summary-item"><b class="summary-value">王冬青</b><span class="summary-label">姓名</span></div>
-        <div class="summary-item"><b class="summary-value experience-years">5年</b><span class="summary-label">产品经验</span></div>
+        <div class="summary-item"><b class="summary-value">王冬青</b></div>
+        <div class="summary-item"><b class="summary-value experience-years">5年产品经验</b></div>
       </div>
       <div class="profile-focus">
         <div class="focus-item"><b class="focus-value">B端·中后台·SaaS</b><span class="focus-label">领域</span></div>
         <div class="focus-item"><b class="focus-value">AI落地·vibe coding</b><span class="focus-label">聚焦</span></div>
       </div>
-      <div class="edu-label"><span class="pdot"></span><span>教育背景 · 在线</span></div>
       <div class="edu-grid">
         <div class="edu-item"><span class="edu-degree">硕士</span><span class="edu-major">通信工程 · 江苏科技大学</span></div>
         <div class="edu-item"><span class="edu-degree">本科</span><span class="edu-major">数学 · 鲁东大学</span></div>
@@ -418,7 +412,7 @@
       <article class="capability reveal">
         <span class="cap-index">06</span><span class="cap-tag">PM</span>
         <h3>项目管理与敏捷 PO</h3>
-        <p>PMP 项目管理认证，担任产研敏捷团队 PO，管理团队需求与迭代计划，保障项目按期高质量交付。</p>
+        <p>PMP项目证书，担任产研敏捷团队 PO，管理团队需求与迭代计划，保障项目按期高质量交付。</p>
       </article>
     </div>
   </div>
